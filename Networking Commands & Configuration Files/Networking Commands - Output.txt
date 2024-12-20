@@ -1,0 +1,172 @@
+NETWORKING COMMANDS:
+1) ip: ip addr
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp9s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 1c:69:7a:8f:16:8b brd ff:ff:ff:ff:ff:ff
+    inet 192.168.3.111/20 brd 192.168.15.255 scope global dynamic noprefixroute enp9s0
+       valid_lft 14327sec preferred_lft 14327sec
+    inet6 fe80::1e69:7aff:fe8f:168b/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+
+2) traceroute: traceroute www.excelmec.org
+
+traceroute to www.excelmec.org (104.21.7.63), 30 hops max, 60 byte packets
+ 1  14.139.184.209 (14.139.184.209)  0.600 ms  0.691 ms  0.782 ms
+ 2  * * *
+ 3  * * *
+ 4  10.255.221.33 (10.255.221.33)  28.496 ms 10.255.222.33 (10.255.222.33)  28.611 ms  28.600 ms
+ 5  115.247.100.29 (115.247.100.29)  34.785 ms  34.777 ms  34.761 ms
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  162.158.84.123 (162.158.84.123)  189.119 ms 162.158.84.115 (162.158.84.115)  175.945 ms *
+11  104.21.7.63 (104.21.7.63)  182.353 ms * *
+
+3) ping: ping google.com
+
+PING google.com (142.250.193.142) 56(84) bytes of data.
+64 bytes from maa05s25-in-f14.1e100.net (142.250.193.142): icmp_seq=1 ttl=57 time=18.8 ms
+64 bytes from maa05s25-in-f14.1e100.net (142.250.193.142): icmp_seq=2 ttl=57 time=18.7 ms
+64 bytes from maa05s25-in-f14.1e100.net (142.250.193.142): icmp_seq=3 ttl=57 time=18.7 ms
+64 bytes from maa05s25-in-f14.1e100.net (142.250.193.142): icmp_seq=4 ttl=57 time=18.7 ms
+^C
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 18.657/18.725/18.790/0.048 ms
+
+4) netstat: netstat
+
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+udp        0      0 debian:bootpc           192.168.0.4:bootps      ESTABLISHED
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  3      [ ]         STREAM     CONNECTED     28185    
+unix  3      [ ]         STREAM     CONNECTED     24641    
+unix  3      [ ]         STREAM     CONNECTED     28188    /run/user/1000/pipewire-0
+
+5) hostname: hostname
+
+debian
+
+6) ifconfig: /sbin/ifconfig
+
+enp9s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.3.111  netmask 255.255.240.0  broadcast 192.168.15.255
+        inet6 fe80::1e69:7aff:fe8f:168b  prefixlen 64  scopeid 0x20<link>
+        ether 1c:69:7a:8f:16:8b  txqueuelen 1000  (Ethernet)
+        RX packets 34841  bytes 7966464 (7.5 MiB)
+        RX errors 0  dropped 2356  overruns 0  frame 0
+        TX packets 2088  bytes 581419 (567.7 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 51  bytes 10740 (10.4 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 51  bytes 10740 (10.4 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+7) arp: /usr/sbin/arp
+
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.10.0             ether   48:0f:cf:cd:54:96   C                     enp9s0
+192.168.0.4              ether   f4:4d:30:1e:c8:d3   C                     enp9s0
+192.168.0.29             ether   18:66:da:a3:a7:f4   C                     enp9s0
+_gateway                 ether   00:90:27:e6:36:c8   C                     enp9s0
+192.168.0.2              ether   18:66:da:a3:a7:f4   C                     enp9s0
+192.168.0.6              ether   2c:27:d7:2f:ab:f0   C                     enp9s0
+192.168.7.187            ether   50:46:5d:52:bd:78   C                     enp9s0
+
+8) whois: whois google.com
+
+.
+.
+.
+Domain Name: google.com
+Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2024-08-02T02:17:33+0000
+Creation Date: 1997-09-15T07:00:00+0000
+Registrar Registration Expiration Date: 2028-09-13T07:00:00+0000
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2086851750
+.
+.
+.
+
+9) nslookup: nslookup google.com
+
+Server:		192.168.0.2
+Address:	192.168.0.2#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.250.193.174
+Name:	google.com
+Address: 2404:6800:4007:818::200e
+
+10) ftp: ftp localhost
+
+Trying [::1]:21 ...
+Connected to localhost.
+220 (vsFTPd 3.0.3)
+Name (localhost:mec): mec
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+229 Entering Extended Passive Mode (|||8590|)
+150 Here comes the directory listing.
+drwxr-xr-x    2 1000     1000         4096 Oct 18 14:59 abc
+-rw-r--r--    1 1000     1000          152 Dec 04 14:21 xyz.py
+-rw-r--r--    1 1000     1000          849 Nov 05 14:35 lmn.c
+.
+.
+.
+
+11) telnet: telnet example.com 80
+
+Trying 93.184.215.14...
+Connected to example.com.
+Escape character is '^]'.
+status
+HTTP/1.0 501 Not Implemented
+Content-Type: text/html
+Content-Length: 357
+Connection: close
+Date: Thu, 19 Dec 2024 06:46:30 GMT
+Server: ECLF (nyd/D18E)
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>501 - Not Implemented</title>
+	</head>
+	<body>
+		<h1>501 - Not Implemented</h1>
+	</body>
+</html>
+Connection closed by foreign host.
+
+12) finger: finger
+
+Login     Name       Tty      Idle  Login Time   Office     Office Phone
+mec       MEC        tty2        9  Dec 19 12:08 (tty2)
