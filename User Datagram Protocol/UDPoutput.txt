@@ -1,0 +1,13 @@
+Server:
+
+Socket Created Successfully!
+Socket Binded Successfully!
+Listening....
+Datagram From Client: Hello Server!
+
+Client:
+
+Socket Created Successfully!
+
+Enter The Data To Be Sent: Hello Server!
+Message Sent Successfully!

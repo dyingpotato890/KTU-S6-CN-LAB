@@ -1,0 +1,14 @@
+Server:
+
+Socket Created Successfully!
+Socket Binded Successfully!
+Acceptance Successfully!
+Message From Client: Hello Server!
+
+Client:
+
+Socket Created Successfully!
+Connection Successful!
+
+Enter The Data To Be Sent: Hello Server! 
+Message Sent!
