@@ -1,0 +1,32 @@
+Server listening on port 8000
+Connection accepted
+Server received: frame
+Received frame 1 successfully!
+Ack Lost!
+Waiting For 1 Seconds
+Waiting For 2 Seconds
+Waiting For 3 Seconds
+Retransmitting Ack
+Server sending: ack
+Server received: frame
+Received frame 2 successfully!
+Server sending: ack
+Server received: frame
+Received frame 3 successfully!
+Ack Lost!
+Waiting For 1 Seconds
+Waiting For 2 Seconds
+Waiting For 3 Seconds
+Retransmitting Ack
+Server sending: ack
+Server received: frame
+Received frame 4 successfully!
+Server sending: ack
+Server received: frame
+Received frame 5 successfully!
+Ack Lost!
+Waiting For 1 Seconds
+Waiting For 2 Seconds
+Waiting For 3 Seconds
+Retransmitting Ack
+Server sending: ack

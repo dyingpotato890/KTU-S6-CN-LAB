@@ -1,0 +1,41 @@
+Connected to server
+Sending 1
+Packet Lost!
+Waiting For 1 Seconds
+Waiting For 2 Seconds
+Waiting For 3 Seconds
+Retransmitting Packet
+Client sending: frame
+Sent 1
+Received response: ackme
+Acknowledgement Received For 1
+Sending 2
+Client sending: frame
+Sent 2
+Received response: ackme
+Acknowledgement Received For 2
+Sending 3
+Packet Lost!
+Waiting For 1 Seconds
+Waiting For 2 Seconds
+Waiting For 3 Seconds
+Retransmitting Packet
+Client sending: frame
+Sent 3
+Received response: ackme
+Acknowledgement Received For 3
+Sending 4
+Client sending: frame
+Sent 4
+Received response: ackme
+Acknowledgement Received For 4
+Sending 5
+Packet Lost!
+Waiting For 1 Seconds
+Waiting For 2 Seconds
+Waiting For 3 Seconds
+Retransmitting Packet
+Client sending: frame
+Sent 5
+Received response: ackme
+Acknowledgement Received For 5

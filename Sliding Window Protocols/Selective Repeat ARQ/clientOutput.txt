@@ -1,0 +1,35 @@
+Client - With Individual Acknowledgement Scheme
+
+Message Received From Server: Server Message: 0 
+Corruption Status: 0 
+Acknowledgement Sent For Message.
+Message Received From Server: Server Message: 1 
+Corruption Status: 1 
+Acknowledgement Sent For Message.
+Message Received From Server: Server Message: 2 
+Corruption Status: 0 
+Acknowledgement Sent For Message.
+Message Received From Server: Server Message: 3 
+Corruption Status: 0 
+Acknowledgement Sent For Message.
+Message Received From Server: Server Message: 4 
+Corruption Status: 0 
+Acknowledgement Sent For Message.
+Message Received From Server: Server Message: 5 
+Corruption Status: 1 
+Acknowledgement Sent For Message.
+Message Received From Server: Server Message: 6 
+Corruption Status: 0 
+Acknowledgement Sent For Message.
+Message Received From Server: Server Message: 7 
+Corruption Status: 0 
+Acknowledgement Sent For Message.
+Message Received From Server: Server Message: 8 
+Corruption Status: 1 
+Acknowledgement Sent For Message.
+Message Received From Server:  
+Corruption Status: 0 
+Acknowledgement Sent For Message.
+Message Received From Server:  
+Corruption Status: 0 
+Acknowledgement Sent For Message.

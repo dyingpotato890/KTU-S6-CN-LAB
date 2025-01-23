@@ -1,0 +1,25 @@
+Sender of Go Back N where N = 8
+To Receiver -> Frame 0
+To Receiver -> Frame 1
+--- From Receiver <- ACK2 -- Cumulative Acknowledgement ---
+-----------------------------------------------------
+To Receiver -> Frame 2
+--- From Receiver <- ACK3 -- Individual Acknowledgement ---
+-----------------------------------------------------
+To Receiver -> Frame 3
+To Receiver -> Frame 4
+--- From Receiver <- ACK5 -- Cumulative Acknowledgement ---
+-----------------------------------------------------
+To Receiver -> Frame 5
+To Receiver -> Frame 6
+
+--- Timer Timeout - Packet 5 Sent Lost ---
+--- Restart Timer - Resending Packets in Go Back N Method ---
+
+To Receiver -> Frame 5
+To Receiver -> Frame 6
+--- From Receiver <- ACK7 -- Cumulative Acknowledgement ---
+-----------------------------------------------------
+To Receiver -> Frame 7
+--- From Receiver <- ACK0 -- Individual Acknowledgement ---
+-----------------------------------------------------

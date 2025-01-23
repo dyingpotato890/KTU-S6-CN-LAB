@@ -1,0 +1,23 @@
+Receiver of Go Back N where N = 8
+
+-> Received frame0
+-> Received frame1
+<- ACK 2 - Cumulative Acknowledgement
+-----------------------------------------------------
+-> Received frame2
+<- ACK 3 - Individual Acknowledgement
+-----------------------------------------------------
+-> Received frame3
+-> Received frame4
+<- ACK 5 - Cumulative Acknowledgement
+-----------------------------------------------------
+
+ --- Packet from Sender 5 Lost - 6 Received Out of Order - Discarding ---
+-> Received frame5
+-> Received frame6
+<- ACK 7 - Cumulative Acknowledgement
+-----------------------------------------------------
+-> Received frame7
+<- ACK 0 - Individual Acknowledgement
+-----------------------------------------------------
+
