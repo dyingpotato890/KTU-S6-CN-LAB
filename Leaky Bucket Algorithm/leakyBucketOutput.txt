@@ -1,0 +1,15 @@
+Enter The Bucket Capacity: 10
+Enter The Leak Rate: 4
+Enter The Number of Packets: 5
+Enter The Size of Each Incoming Packet:
+5 8 4 3 6
+
+Leaky Bucket Simulation:
+Time	Incoming	Bucket	Leaked	Remaining
+1         5              5         4         1
+2         8              9         4         5
+3         4              9         4         5
+4         3              8         4         4
+5         6             10         4         6
+6         0              6         4         2
+7         0              2         2         0
