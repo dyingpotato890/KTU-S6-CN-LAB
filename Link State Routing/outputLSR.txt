@@ -1,0 +1,13 @@
+Enter the number of routers: 4
+Enter the cost adjacency matrix (use 0 for no direct link):
+0 1 4 0 
+1 0 2 6
+4 2 0 3
+0 6 3 0
+Enter the source router: 1
+
+Routing Table for Router 1:
+Destination	Cost	Next Hop
+2		1	2
+3		3	2
+4		6	2
