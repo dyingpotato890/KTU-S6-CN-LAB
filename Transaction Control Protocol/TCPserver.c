@@ -12,60 +12,62 @@ Compile using: gcc TCPserver.c -o server
 
 int main() {
     char buffer[100];
-    int k; /*Error Flag*/
-    socklen_t len;
-    int sock_desc, temp_sock_desc;
-    struct sockaddr_in server, client;
+    int status; /* Error Flag */
+    socklen_t client_len;
+    int server_socket, client_socket;
+    struct sockaddr_in server_addr, client_addr;
 
-    /*Creating Socket*/
-    sock_desc = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock_desc == -1) {
-        printf("Error In Socket Creation!");
+    /* Creating Socket */
+    server_socket = socket(AF_INET, SOCK_STREAM, 0);
+    if (server_socket == -1) {
+        printf("Error in socket creation!\n");
         return 1;
     }
-    printf("Socket Created Successfully!\n");
+    printf("Socket created successfully!\n");
 
-    server.sin_family = AF_INET;
-    server.sin_addr.s_addr = INADDR_ANY;
-    server.sin_port = 3003;
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_addr.s_addr = INADDR_ANY;
+    server_addr.sin_port = htons(3003); // Ensure correct byte order
 
-    /*Binding Process*/
-    k = bind(sock_desc, (struct sockaddr *)&server, sizeof(server));
-    if (k == -1) {
-        printf("Error In Binding!");
+    /* Binding Process */
+    status = bind(server_socket, (struct sockaddr *)&server_addr, sizeof(server_addr));
+    if (status == -1) {
+        printf("Error in binding!\n");
         return 1;
     }
-    printf("Socket Binded Successfully!\n");
+    printf("Socket bound successfully!\n");
 
-    /*Listening Process*/
-    k = listen(sock_desc, 5);
-    if (k == -1) {
-        printf("Error In Listening!");
+    /* Listening Process */
+    status = listen(server_socket, 5);
+    if (status == -1) {
+        printf("Error in listening!\n");
         return 1;
     }
+    printf("Server is listening for incoming connections...\n");
 
-    len = sizeof(client);
+    client_len = sizeof(client_addr);
 
-    /*Accepting Process*/
-    temp_sock_desc = accept(sock_desc, (struct sockaddr *)&client, &len);
-    if (temp_sock_desc == -1) {
-        printf("Error In Temporary Socket Creation!");
+    /* Accepting Connection */
+    client_socket = accept(server_socket, (struct sockaddr *)&client_addr, &client_len);
+    if (client_socket == -1) {
+        printf("Error in accepting connection!\n");
         return 1;
     }
-    printf("Acceptance Successfully!\n");
+    printf("Client connected successfully!\n");
 
-    /*Receiving Process*/
-    k = recv(temp_sock_desc, buffer, 100, 0);
-    if (k == -1) {
-        printf("Error In Receiving Data!");
+    /* Receiving Data */
+    status = recv(client_socket, buffer, sizeof(buffer), 0);
+    if (status == -1) {
+        printf("Error in receiving data!\n");
         return 1;
     }
-    printf("Listening....\n");
+    
+    buffer[status] = '\0'; // Null-terminate the received data
+    printf("Message from Client: %s\n", buffer);
 
-    printf("Message From Client: %s\n", buffer);
-
-    close(temp_sock_desc);
-    close(sock_desc);
+    /* Closing Sockets */
+    close(client_socket);
+    close(server_socket);
 
     return 0;
 }
