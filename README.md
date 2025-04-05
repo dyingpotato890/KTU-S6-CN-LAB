@@ -1,4 +1,4 @@
-# KTU S6 Networking LAB
+# KTU S6 NETWORKING LAB
 
 This repository is dedicated to storing programs required for the Networking lab sessions conducted in Semester 6 for KTU students (2019 Syllabus).
 
