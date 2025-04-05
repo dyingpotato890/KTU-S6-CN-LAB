@@ -42,10 +42,10 @@ This repository is dedicated to storing programs required for the Networking lab
    * Go Back N ARQ:
      - Code: [Server](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Go%20Back%20N%20ARQ/goBackARQServer.c) & [Client](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Go%20Back%20N%20ARQ/goBackARQClient.c)
      - Output: [Server](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Go%20Back%20N%20ARQ/serverOutput.txt) & [Client](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Go%20Back%20N%20ARQ/clinetOutput.txt)
-   * Selective Repeat ARQ
+   * Selective Repeat ARQ:
      - Code: [Server](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Selective%20Repeat%20ARQ/selRepARQServer.c) & [Client](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Selective%20Repeat%20ARQ/selRepARQClient.c)
      - Output: [Server](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Selective%20Repeat%20ARQ/serverOutput.txt) & [Client](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Selective%20Repeat%20ARQ/clientOutput.txt)
-   * Stop & Wait ARQ
+   * Stop & Wait ARQ:
      - Code: [Server](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Stop%20%26%20Wait%20ARQ/snwARQServer.c) & [Client](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Stop%20%26%20Wait%20ARQ/snwARQClient.c)
      - Output: [Server](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Stop%20%26%20Wait%20ARQ/serverOutput.txt) & [Client](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Sliding%20Window%20Protocols/Stop%20%26%20Wait%20ARQ/clientOutput.txt)
      
@@ -58,6 +58,14 @@ This repository is dedicated to storing programs required for the Networking lab
      - [Client](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/File%20Transfer%20Protocol/clientOutput.txt)
       
 6. Leaky Bucket Algorithm: [Code](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Leaky%20Bucket%20Algorithm/leakyBucket.c) & [Output](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Leaky%20Bucket%20Algorithm/leakyBucketOutput.txt)
+
+7. Routing Algorithms:
+   * Distance Vector Routing (DVR): [Code](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Distance%20Vector%20Routing/DVR.c) & [Output](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Distance%20Vector%20Routing/outputDVR.txt)
+   * Link State Routing (LSR): [Code](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Link%20State%20Routing/LSR.c) & [Output](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/Link%20State%20Routing/outputLSR.txt)
+  
+8. NS2:
+   * Distance Vector Routing (DVR): [Code](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/NS2/distance-vector.tcl) & [Output](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/NS2/DVR%20-%20Output.png)
+   * Link State Routing (LSR): [Code](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/NS2/link-state.tcl) & [Output](https://github.com/dyingpotato890/KTU-S6-CN-LAB/blob/main/NS2/LSR%20-%20Output.png) 
 
 ## Contributors:
 
