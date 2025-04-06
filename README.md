@@ -15,7 +15,7 @@ This repository is dedicated to storing programs required for the Networking lab
    
 2. **Clone the Repository:**
    ```bash
-   git clone https://github.com/dyingpotato890/KTU-S6-CN-LAB.git
+   git clone https://github.com/dyingpotato890/KTU-S6-NETWORKING-LAB.git
    ```
 3. **Navigate to the Directory:**
     ```bash
