@@ -4,7 +4,7 @@
 #include <time.h>
 
 int main() {
-    srand(time(NULL)); // Seed the random number generator
+    srand(time(NULL));
 
     int n, timer, windowSize;
     printf("Enter total number of frames: ");
@@ -16,9 +16,9 @@ int main() {
     printf("Enter window size: ");
     scanf("%d", &windowSize);
 
-    int packets[n];           // Array of packets
-    int retransmit[n];        // Flags to mark packets for retransmission
-    int ack[n];               // Acknowledgment tracking
+    int packets[n];
+    int retransmit[n]; // Flags to mark packets for retransmission
+    int ack[n];
 
     for (int i = 0; i < n; i++) {
         packets[i] = i;
@@ -29,21 +29,21 @@ int main() {
     int base = 0;
 
     while (base < n) {
-        printf("\n=== Sending window from Packet %d to Packet %d ===\n", base, base + windowSize - 1);
+        printf("\n=== Sending Window From Packet %d to Packet %d ===\n", base, base + windowSize - 1);
 
         // Send packets in window
         for (int i = base; i < base + windowSize && i < n; i++) {
             if (ack[i] == 0) {
-                printf("Sending Packet %d to receiver\n", packets[i]);
+                printf("Sending Packet %d to Receiver\n", packets[i]);
                 sleep(timer);
 
                 // Simulate packet loss
                 int lost = rand() % n;
                 if (lost == packets[i]) {
-                    printf("Acknowledgement for Packet %d NOT received. Will retransmit.\n", packets[i]);
+                    printf("Acknowledgement for Packet %d NOT Received. Will Retransmit.\n", packets[i]);
                     retransmit[i] = 1;
                 } else {
-                    printf("Acknowledgement for Packet %d received.\n", packets[i]);
+                    printf("Acknowledgement for Packet %d Received.\n", packets[i]);
                     ack[i] = 1;
                 }
             }
@@ -56,7 +56,7 @@ int main() {
                 sleep(timer);
 
                 // Simulate second attempt (assume success)
-                printf("Acknowledgement for Packet %d received after retransmission.\n", packets[i]);
+                printf("Acknowledgement for Packet %d Received After Retransmission.\n", packets[i]);
                 ack[i] = 1;
                 retransmit[i] = 0;
             }
@@ -68,6 +68,6 @@ int main() {
         }
     }
 
-    printf("\nAll packets sent and acknowledged successfully.\n");
+    printf("\nAll Packets Sent and Acknowledged Successfully.\n");
     return 0;
 }
