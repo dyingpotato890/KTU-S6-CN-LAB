@@ -19,7 +19,7 @@ This repository is dedicated to storing programs required for the Networking lab
    ```
 3. **Navigate to the Directory:**
     ```bash
-    cd KTU-S6-CN-LAB
+    cd KTU-S6-NETWORKING-LAB
    ```
 
 ## List of Experiments
